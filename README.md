@@ -1,4 +1,4 @@
-# Group5
+# Group13
 Raspberry-Pi–powered automated window control system
 
 ## Overview
