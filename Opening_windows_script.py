@@ -28,7 +28,7 @@ lcd = JHD1802()
 DHT_IN_PIN = 26
 temp_in_sensor = dht11.DHT11(pin=DHT_IN_PIN)
 
-moisture_sensor = GroveMoistureSensor(4)  # Analog A1
+moisture_sensor = GroveMoistureSensor(4)  # Analog A4
 
 # ---------------------------
 # InfluxDB setup
