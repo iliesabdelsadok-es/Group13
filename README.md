@@ -29,7 +29,7 @@ It uses temperature, moisture, presence detection, and a democratic voting mecha
 | Grove Relay           | Opens/closes window          | 22         |
 | JHD1802 LCD           | Displays system messages     | I²C        |
 | DHT11 Sensor          | Measures indoor temperature  | 26         |
-| Grove Moisture Sensor | Rain/soil moisture detection | A1 → CH4   |
+| Grove Moisture Sensor | Rain/soil moisture detection | A4         |
 | Presence buttons      | Student presence & voting    | 12, 16, 18 |
 | Start button          | New session reset            | 6          |
 
