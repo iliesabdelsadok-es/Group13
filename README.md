@@ -5,7 +5,6 @@ Raspberry-Pi–powered automated window control system
 
 This project is a Raspberry-Pi–powered automated window control system designed for a classroom environment.  
 It uses temperature, moisture, presence detection, and a democratic voting mechanism to decide whether to open or close windows.  
-All events and errors are logged to InfluxDB.
 
 ## Table of Contents
 
