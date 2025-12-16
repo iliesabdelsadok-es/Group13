@@ -122,7 +122,7 @@ Different types of data are stored in an local influx database:
 
 ## Monitoring & Dashboards (Grafana)
 
-The system provides real-time monitoring dashboards using **Grafana**, accessible on **port 8080**.
+The system provides real-time monitoring dashboards using **Grafana**, accessible on **port 3000**.
 
 Dashboards are connected to **InfluxDB** and allow visualization of system behavior and voting activity.
 
