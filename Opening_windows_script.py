@@ -45,7 +45,7 @@ write_api = client.write_api(write_options=SYNCHRONOUS)
 # global var
 # ---------------------------
 last_no_vote_time = 0
-VOTE_COOLDOWN = 10
+VOTE_COOLDOWN = 10*60
 
 # ---------------------------
 # Presence management
@@ -186,6 +186,10 @@ try:
         current_time = time.time()
         if condition and not window_open:
             if current_time - last_no_vote_time >= VOTE_COOLDOWN:
+                print(current_time)
+                print(last_no_vote_time)
+                print(current_time - last_no_vote_time)
+                print(VOTE_COOLDOWN)
                 voted = vote_for_window(temperature, moisture)
                 if voted:
                     window_open = True
