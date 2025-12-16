@@ -45,7 +45,7 @@ write_api = client.write_api(write_options=SYNCHRONOUS)
 # global var
 # ---------------------------
 last_no_vote_time = 0
-VOTE_COOLDOWN = 10*60
+VOTE_COOLDOWN = 20
 
 # ---------------------------
 # Presence management
@@ -109,8 +109,7 @@ def close_windows_conditions(temperature, moisture):
 def update_presence():
     for pin in BUTTON_PINS:
         value = GPIO.input(pin)
-#        if pin == 6:
-#            value = not value   #invert logic here
+        #invert logic here
         if value == 1 and pin not in present_students:
             present_students.add(pin)
             print(f"Participant present on button {pin} → total: {len(present_students)}")
@@ -135,8 +134,9 @@ def vote_for_window(temperature, moisture, vote_duration=15):
     while (time.time() - start_time) < vote_duration:
          for pin in BUTTON_PINS:
             value = GPIO.input(pin)
+            #invert logic here
             if pin == 6:
-                value = not value   #invert logic here
+                value = not value
             if value == 1 and not pressed[pin] and pin in present_students:
                 pressed[pin] = True
                 print(f"Button {pin} pressed")
