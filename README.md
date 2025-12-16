@@ -10,7 +10,6 @@ It uses temperature, moisture, presence detection, and a democratic voting mecha
 
 - [Overview](#overview)
 - [Hardware Components](#hardware-components)
-- [InfluxDB Logging](#influxdb-logging)
 - [Presence Management](#presence-management)
 - [Environmental Monitoring](#environmental-monitoring)
 - [Voting System](#voting-system)
@@ -18,6 +17,7 @@ It uses temperature, moisture, presence detection, and a democratic voting mecha
 - [Error Handling](#error-handling)
 - [Main Loop Summary](#main-loop-summary)
 - [Required Libraries](#required-libraries)
+- [InfluxDB Logging](#influxdb-logging)
 - [Monitoring & Dashboards (Grafana)](#monitoring--dashboards-grafana)
 - [Conclusion](#conclusion)
 
