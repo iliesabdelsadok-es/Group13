@@ -1,12 +1,12 @@
 # Group5
 Raspberry-Pi–powered automated window control system
 
-📌 Overview
+Overview
 
 This project is a Raspberry-Pi–powered automated window control system designed for a classroom environment.
 It uses temperature, moisture, presence detection, and a democratic voting mechanism to decide whether to open or close windows. All events and errors are logged to InfluxDB.
 
-🛠️ 1. Hardware Components
+1. Hardware Components
 
 | Component             | Purpose                      | GPIO       |
 | --------------------- | ---------------------------- | ---------- |
@@ -19,9 +19,9 @@ It uses temperature, moisture, presence detection, and a democratic voting mecha
 | Start button          | New session reset            | 6          |
 
 
-🗄️ 2. InfluxDB Logging
+2. InfluxDB Logging
 
-Two measurement types are stored:
+differents type of datas are stored:
 
 Environment & Voting
 
@@ -37,9 +37,9 @@ Error Logs
 
 error message
 
-full Python traceback
+full Python traceback in case of error
 
-👥 3. Presence Management
+3. Presence Management
 
 Each student presses their assigned button to mark presence.
 
@@ -47,7 +47,7 @@ The START button clears presence and begins a new session.
 
 LCD shows number of present students.
 
-🌡️ 4. Environmental Monitoring
+4. Environmental Monitoring
 
 The loop continuously reads:
 
@@ -57,13 +57,13 @@ Moisture level (rain detection)
 
 Voting is triggered when:
 
-Temperature > 25°C
+- Temperature > 25°C
 
-Moisture < 50 (dry)
+- Moisture < 50 (dry)
 
-Window is closed
+- Window is closed
 
-🗳️ 5. Voting System
+5. Voting System
 
 When conditions require opening the window:
 
@@ -77,9 +77,7 @@ If YES votes > 50% → window opens.
 
 Cooldown prevents repeated votes after a NO result.
 
-All results logged to InfluxDB.
-
-🪟 6. Window Closing Logic
+6. Window Closing Logic
 
 When the window is open:
 
@@ -89,7 +87,7 @@ If moisture > 200 (rain detected) → close window
 
 LCD messages indicate the reason.
 
-⚠️ 7. Error Handling
+7. Error Handling
 
 Every exception creates an InfluxDB error entry containing:
 
@@ -105,7 +103,7 @@ LCD cleared
 
 GPIO cleanup
 
-🔄 8. Main Loop Summary
+8. Main Loop Summary
 
 Runs every 1 second and executes:
 
@@ -121,7 +119,7 @@ Logging of all events
 
 Complete autonomous operation
 
-📦 9. Required Libraries
+9. Required Libraries
 Hardware & GPIO
 
 RPi.GPIO
@@ -144,6 +142,6 @@ time
 
 traceback
 
-📝 10. Conclusion
+10. Conclusion
 
 This prototype combines environmental sensors, user interaction, and automated decision-making to manage classroom ventilation intelligently and safely. It enhances comfort, encourages engagement, and logs all system activity for analysis.
