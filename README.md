@@ -6,6 +6,21 @@ Overview
 This project is a Raspberry-Pi–powered automated window control system designed for a classroom environment.
 It uses temperature, moisture, presence detection, and a democratic voting mechanism to decide whether to open or close windows. All events and errors are logged to InfluxDB.
 
+## Table of Contents
+
+- [Overview](#overview)
+- [Hardware Components](#1-hardware-components)
+- [InfluxDB Logging](#2-influxdb-logging)
+- [Presence Management](#3-presence-management)
+- [Environmental Monitoring](#4-environmental-monitoring)
+- [Voting System](#5-voting-system)
+- [Window Closing Logic](#6-window-closing-logic)
+- [Error Handling](#7-error-handling)
+- [Main Loop Summary](#8-main-loop-summary)
+- [Required Libraries](#9-required-libraries)
+- [Monitoring & Dashboards (Grafana)](#10-monitoring--dashboards-grafana)
+- [Conclusion](#11-conclusion)
+
 1. Hardware Components
 
 | Component             | Purpose                      | GPIO       |
